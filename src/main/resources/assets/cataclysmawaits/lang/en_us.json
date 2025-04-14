@@ -1,0 +1,13 @@
+{
+  "item.cataclysmawaits.gil": "Gil",
+  "item.cataclysmawaits.sil": "Sil",
+  "item.cataclysmawaits.glapple": "Glapple",
+  "item.cataclysmawaits.totemofreturn": "Totem of Return",
+  "item.cataclysmawaits.friedmushletcapcap": "Fried Mushroom Cap Cap",
+  "item.cataclysmawaits.mushletcapcap": "Mushlet Cap Cap",
+
+  "block.cataclysmawaits.gil_stack": "Gil Stack",
+  "block.cataclysmawaits.sil_stack": "Sil Stack",
+
+  "creativetab.cataclysmawaits.cataclysm_awaits": "Cataclysm Awaits"
+}
