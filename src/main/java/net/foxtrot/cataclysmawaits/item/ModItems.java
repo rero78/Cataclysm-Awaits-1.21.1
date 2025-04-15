@@ -28,6 +28,10 @@ public class ModItems {
     public static final DeferredItem<Item> FRIEDMUSHLETCAPCAP = ITEMS.register("friedmushletcapcap",
             () -> new Item(new Item.Properties().food(ModFoodProperties.FRIEDMUSHLETCAPCAP)));
 
+
+
+
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
