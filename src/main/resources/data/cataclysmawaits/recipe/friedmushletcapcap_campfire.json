@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 0.50,
+  "ingredient": {
+    "item": "cataclysmawaits:mushletcapcap"
+  },
+  "result": {
+    "id": "cataclysmawaits:friedmushletcapcap"
+  }
+}

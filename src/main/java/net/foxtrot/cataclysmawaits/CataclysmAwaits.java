@@ -4,6 +4,7 @@ import net.foxtrot.cataclysmawaits.block.ModBlocks;
 import net.foxtrot.cataclysmawaits.item.ModCreativeModeTabs;
 import net.foxtrot.cataclysmawaits.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -19,6 +20,8 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import software.bernie.geckolib.GeckoLib;
+import software.bernie.geckolib.renderer.GeoItemRenderer;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file x
 @Mod(CataclysmAwaits.MOD_ID)
@@ -50,6 +53,8 @@ public class CataclysmAwaits
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -64,6 +69,8 @@ public class CataclysmAwaits
     public void onServerStarting(ServerStartingEvent event) {
     }
 
+    private void clientSetup(final FMLClientSetupEvent event) {
+    }
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     // @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {

@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "cataclysmawaits:item/glapple"
+    "layer0": "cataclysmawaits:item/glapple",
+    "layer1": "cataclysmawaits:item/glapple_core"
   }
 }

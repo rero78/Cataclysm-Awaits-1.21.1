@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.70,
+  "ingredient": {
+    "item": "cataclysmawaits:mushletcapcap"
+  },
+  "result": {
+    "id": "cataclysmawaits:friedmushletcapcap"
+  }
+}

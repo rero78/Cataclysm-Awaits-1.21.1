@@ -20,7 +20,7 @@ import java.util.function.Supplier;
 public class ModArmorMaterials {
     public static final Holder<ArmorMaterial> MUSHLET_MATERIAL = register("mushletcapcap",
             Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-                attribute.put(ArmorItem.Type.HELMET, 5);
+                attribute.put(ArmorItem.Type.HELMET, 1);
             }), 99, 0f, 0f, () -> net.minecraft.world.item.Items.RED_MUSHROOM);
 
 
