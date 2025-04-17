@@ -1,5 +1,6 @@
 package net.foxtrot.cataclysmawaits.entity.custom;
 
+import net.foxtrot.cataclysmawaits.sound.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
@@ -9,6 +10,7 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
@@ -32,6 +34,8 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Random;
 
 public class MushboomEntity extends Monster {
 
@@ -205,5 +209,29 @@ public class MushboomEntity extends Monster {
                 Registries.LOOT_TABLE,
                 ResourceLocation.fromNamespaceAndPath("cataclysmawaits", "entities/mushboom")
         );
+    }
+
+    private static final Random RANDOM = new Random();
+
+    @Nullable
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return RANDOM.nextBoolean()
+                ? ModSounds.MUSHBOOM_AMBIENT1.get()
+                : ModSounds.MUSHBOOM_AMBIENT2.get();
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getHurtSound(DamageSource damageSource) {
+        return RANDOM.nextBoolean()
+                ? ModSounds.MUSHBOOM_HURT1.get()
+                : ModSounds.MUSHBOOM_HURT2.get();
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getDeathSound() {
+        return ModSounds.MUSHBOOM_DEATH.get();
     }
 }

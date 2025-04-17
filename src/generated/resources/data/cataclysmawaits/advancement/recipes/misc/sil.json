@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gil_stack": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cataclysmawaits:sil_stack"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cataclysmawaits:sil"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gil_stack"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cataclysmawaits:sil"
+    ]
+  }
+}

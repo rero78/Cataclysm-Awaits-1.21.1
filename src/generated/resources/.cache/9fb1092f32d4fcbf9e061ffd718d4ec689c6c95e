@@ -1,0 +1,13 @@
+// 1.21.1	2025-04-16T16:52:15.300809	Recipes
+e280c3e0668d783390538590bec16938d1cff796 data/cataclysmawaits/advancement/recipes/misc/cataclystfuel.json
+6a7f30746a27307968a62111948dee79b9d7aede data/cataclysmawaits/advancement/recipes/misc/gil.json
+5cfa721d2e6ccf2d2ce99a86d61ec6bbc68cb1aa data/cataclysmawaits/advancement/recipes/misc/gil_stack.json
+3b31b200936c08303e77cc2944f03681b3c8223a data/cataclysmawaits/advancement/recipes/misc/sil.json
+e14772a5534326da2f374d849805c140aeaf507e data/cataclysmawaits/advancement/recipes/misc/sil_stack.json
+4af2024d3e0cab8aa8182506c1a7b7cae05ef4ad data/cataclysmawaits/recipe/cataclystfuel.json
+b3343ad682be07d39a6042fdd969a268e543c0cf data/cataclysmawaits/recipe/gil.json
+b3656d20c7cc2a9dd78292c5c2106f6c66c60027 data/cataclysmawaits/recipe/gil_stack.json
+169fa8a073688437c7b9ad919b8fbd95f7e91aef data/cataclysmawaits/recipe/sil.json
+e4d1c3dc5bc107ebdf642db9453cdd5a48c49f41 data/cataclysmawaits/recipe/sil_stack.json
+d99e9b1c98dc5a57e033f1dd96804064ff04cdb2 data/minecraft/advancement/recipes/misc/tnt.json
+1e29243458a2a61befb80c5e13eb175f0ebbd5ec data/minecraft/recipe/tnt.json

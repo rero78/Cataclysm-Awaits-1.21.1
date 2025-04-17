@@ -1,0 +1,92 @@
+{
+  "mush_die": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "cataclysmawaits:mush_die",
+        "stream": false
+      }
+    ]
+  },
+  "mush_hurt1": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "cataclysmawaits:mush_hurt1",
+        "stream": false
+      }
+    ]
+  },
+  "mush_hurt2": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "cataclysmawaits:mush_hurt2",
+        "stream": false
+      }
+    ]
+  },
+  "mush_ambient1": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "cataclysmawaits:mush_ambient1",
+        "stream": false
+      }
+    ]
+  },
+  "mush_ambient2": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "cataclysmawaits:mush_ambient2",
+        "stream": false
+      }
+    ]
+  },
+  "mbomb_die": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "cataclysmawaits:mbomb_die",
+        "stream": false
+      }
+    ]
+  },
+  "mbomb_hurt1": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "cataclysmawaits:mbomb_hurt1",
+        "stream": false
+      }
+    ]
+  },
+  "mbomb_hurt2": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "cataclysmawaits:mbomb_hurt2",
+        "stream": false
+      }
+    ]
+  },
+  "mbomb_ambient1": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "cataclysmawaits:mbomb_ambient1",
+        "stream": false
+      }
+    ]
+  },
+  "mbomb_ambient2": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "cataclysmawaits:mbomb_ambient2",
+        "stream": false
+      }
+    ]
+  }
+}

@@ -2,6 +2,7 @@ package net.foxtrot.cataclysmawaits.entity.custom;
 
 import net.foxtrot.cataclysmawaits.entity.ModEntities;
 import net.foxtrot.cataclysmawaits.entity.MushletVariant;
+import net.foxtrot.cataclysmawaits.sound.ModSounds;
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
@@ -13,6 +14,7 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
@@ -34,6 +36,8 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootTable;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Random;
 
 public class MushletEntity extends Animal {
 
@@ -213,5 +217,28 @@ public class MushletEntity extends Animal {
         );
     }
 
+    private static final Random RANDOM = new Random();
+
+    @Nullable
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return RANDOM.nextBoolean()
+                ? ModSounds.MUSHLET_AMBIENT1.get()
+                : ModSounds.MUSHLET_AMBIENT2.get();
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getHurtSound(DamageSource damageSource) {
+        return RANDOM.nextBoolean()
+                ? ModSounds.MUSHLET_HURT1.get()
+                : ModSounds.MUSHLET_HURT2.get();
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getDeathSound() {
+        return ModSounds.MUSHLET_DEATH.get();
+    }
 }
 

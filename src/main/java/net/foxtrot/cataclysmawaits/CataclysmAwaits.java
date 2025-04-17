@@ -6,6 +6,7 @@ import net.foxtrot.cataclysmawaits.block.entity.ModBlockEntities;
 import net.foxtrot.cataclysmawaits.entity.ModEntities;
 import net.foxtrot.cataclysmawaits.entity.client.MushboomRenderer;
 import net.foxtrot.cataclysmawaits.entity.client.MushletRenderer;
+import net.foxtrot.cataclysmawaits.sound.ModSounds;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.foxtrot.cataclysmawaits.block.entity.ModBlockEntities;
 import net.foxtrot.cataclysmawaits.block.entity.SpecialFrogBlockEntity;
@@ -51,6 +52,8 @@ public class CataclysmAwaits
         ModCreativeModeTabs.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
+
+        ModSounds.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
