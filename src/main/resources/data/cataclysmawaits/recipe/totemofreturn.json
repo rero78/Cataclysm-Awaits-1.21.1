@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:glowstone"
+    },
+    "A": {
+      "item": "minecraft:diamond"
+    },
+    "B": {
+      "item": "minecraft:respawn_anchor"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "ABA",
+    "GGG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "cataclysmawaits:totemofreturn"
+  }
+}

@@ -5,9 +5,36 @@
   "item.cataclysmawaits.totemofreturn": "Totem of Return",
   "item.cataclysmawaits.friedmushletcapcap": "Fried Mushlet Cap Cap",
   "item.cataclysmawaits.mushletcapcap": "Mushlet Cap Cap",
+  "item.cataclysmawaits.cataclystfuel": "Cataclyst Fuel",
+  "item.cataclysmawaits.thehorror": "THE HORROR!!!!!",
+  "item.cataclysmawaits.mushletspawnegg": "Mushlet Spawn Egg",
+  "item.cataclysmawaits.mushboomspawnegg": "Mushboom Spawn Egg",
+  "item.cataclysmawaits.mushroglycerin": "Mushroglycerin",
+  "item.cataclysmawaits.thespoon": "The Spoon",
 
   "block.cataclysmawaits.gil_stack": "Gil Stack",
   "block.cataclysmawaits.sil_stack": "Sil Stack",
+
+  "block.cataclysmawaits.glog": "Glog",
+  "block.cataclysmawaits.frox": "Frox",
+  "block.cataclysmawaits.prog": "Prog",
+  "block.cataclysmawaits.drog": "Drog",
+  "block.cataclysmawaits.sog": "Sog",
+  "block.cataclysmawaits.mog": "Mog",
+  "block.cataclysmawaits.xrog": "Xrog",
+  "block.cataclysmawaits.skrog": "Skrog",
+
+  "item.cataclysmawaits.glog": "Glog",
+  "item.cataclysmawaits.frox": "Frox",
+  "item.cataclysmawaits.prog": "Prog",
+  "item.cataclysmawaits.drog": "Drog",
+  "item.cataclysmawaits.sog": "Sog",
+  "item.cataclysmawaits.mog": "Mog",
+  "item.cataclysmawaits.xrog": "Xrog",
+  "item.cataclysmawaits.skrog": "Skrog",
+
+  "entity.cataclysmawaits.mushlet": "Mushlet",
+  "entity.cataclysmawaits.mushboom": "Mushboom",
 
   "creativetab.cataclysmawaits.cataclysm_awaits": "Cataclysm Awaits"
 }

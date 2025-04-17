@@ -1,14 +1,18 @@
 package net.foxtrot.cataclysmawaits;
 
+import com.mojang.logging.LogUtils;
 import net.foxtrot.cataclysmawaits.block.ModBlocks;
+import net.foxtrot.cataclysmawaits.block.entity.ModBlockEntities;
+import net.foxtrot.cataclysmawaits.entity.ModEntities;
+import net.foxtrot.cataclysmawaits.entity.client.MushboomRenderer;
+import net.foxtrot.cataclysmawaits.entity.client.MushletRenderer;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.foxtrot.cataclysmawaits.block.entity.ModBlockEntities;
+import net.foxtrot.cataclysmawaits.block.entity.SpecialFrogBlockEntity;
+import net.foxtrot.cataclysmawaits.client.renderer.SpecialFrogRenderer;
 import net.foxtrot.cataclysmawaits.item.ModCreativeModeTabs;
 import net.foxtrot.cataclysmawaits.item.ModItems;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import org.slf4j.Logger;
-
-import com.mojang.logging.LogUtils;
-
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -16,12 +20,13 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import org.slf4j.Logger;
 import software.bernie.geckolib.GeckoLib;
-import software.bernie.geckolib.renderer.GeoItemRenderer;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file x
 @Mod(CataclysmAwaits.MOD_ID)
@@ -45,6 +50,8 @@ public class CataclysmAwaits
 
         ModCreativeModeTabs.register(modEventBus);
 
+        ModBlockEntities.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
@@ -53,6 +60,7 @@ public class CataclysmAwaits
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        ModEntities.register(modEventBus);
 
 
     }
@@ -69,10 +77,28 @@ public class CataclysmAwaits
     public void onServerStarting(ServerStartingEvent event) {
     }
 
+
+
     private void clientSetup(final FMLClientSetupEvent event) {
     }
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    // @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents {
+    @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents{
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntities.MUSHLET.get(), MushletRenderer::new);
+            EntityRenderers.register(ModEntities.MUSHBOOM.get(), MushboomRenderer::new);
+
+            // Register block entity renderer for SpecialFrog
+            BlockEntityRenderers.register(
+                    ModBlockEntities.SPECIAL_FROG_BLOCK_ENTITY.get(),
+                    ignoredContext -> new SpecialFrogRenderer()
+            );
+
+
+        }
+
     }
+
+
 }

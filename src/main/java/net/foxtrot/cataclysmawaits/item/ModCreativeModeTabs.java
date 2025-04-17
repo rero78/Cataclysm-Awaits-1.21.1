@@ -27,6 +27,23 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.GLAPPLE);
                         output.accept(ModItems.FRIEDMUSHLETCAPCAP);
                         output.accept(ModItems.MUSHLETCAPCAP);
+                        output.accept(ModItems.CATACLYSTFUEL);
+                        output.accept(ModItems.THEHORROR);
+                        output.accept(ModItems.THE_SPOON);
+                        output.accept(ModItems.MUSHLET_SPAWN_EGG);
+                        output.accept(ModItems.MUSHBOOM_SPAWN_EGG);
+                        output.accept(ModItems.MUSHROGLYCERIN);
+
+
+                        output.accept(ModBlocks.GLOG);
+                        output.accept(ModBlocks.FROX);
+                        output.accept(ModBlocks.PROG);
+                        output.accept(ModBlocks.DROG);
+                        output.accept(ModBlocks.SOG);
+                        output.accept(ModBlocks.MOG);
+                        output.accept(ModBlocks.XROG);
+                        output.accept(ModBlocks.SKROG);
+
                     }).build());
 
 

@@ -1,6 +1,7 @@
 package net.foxtrot.cataclysmawaits.block;
 
 import net.foxtrot.cataclysmawaits.CataclysmAwaits;
+import net.foxtrot.cataclysmawaits.block.custom.Special_Frog;
 import net.foxtrot.cataclysmawaits.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -22,6 +23,15 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SIL_STACK = registerBlock("sil_stack",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Special_Frog> GLOG = BLOCKS.register("glog", Special_Frog::new);
+    public static final DeferredBlock<Special_Frog> FROX = BLOCKS.register("frox", Special_Frog::new);
+    public static final DeferredBlock<Special_Frog> PROG = BLOCKS.register("prog", Special_Frog::new);
+    public static final DeferredBlock<Special_Frog> DROG = BLOCKS.register("drog", Special_Frog::new);
+    public static final DeferredBlock<Special_Frog> SOG = BLOCKS.register("sog", Special_Frog::new);
+    public static final DeferredBlock<Special_Frog> MOG = BLOCKS.register("mog", Special_Frog::new);
+    public static final DeferredBlock<Special_Frog> XROG = BLOCKS.register("xrog", Special_Frog::new);
+    public static final DeferredBlock<Special_Frog> SKROG = BLOCKS.register("skrog", Special_Frog::new);
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
